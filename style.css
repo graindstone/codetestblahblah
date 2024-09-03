@@ -15,10 +15,11 @@ body{
   background-color: Plum !important;
 }
 #text{
-  font-size: 15px;
+  font-size: 17px;
 }
 #secret{
-  font-size: 15px;
+  font-size: 17px;
   border: none;
   background-color: Thistle !important;
+  font-family: Verdana;
 }
