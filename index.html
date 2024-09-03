@@ -3,13 +3,21 @@
     <title>Never gonna give you up!</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js" type="module"></script>
+    <script>
+      function nothing(){
+        document.getElementById("text").style.display="none";
+        document.getElementById("text").innerHTML="I told you there's";
+        document.getElementById("text").style.display="block";
+        document.getElementById("button").style.display="none";
+        document.getElementById("secret").style.display="block";
+    </script>
   </head>
   <body>
     <center>
       <h1>Yet another code test</h1>
       <p id="text">There's nothing here. Obviously.</p>
-       <input id="button" type="button" value="Nothing!">
+      <input id="button" type="button" onclick="nothing()" value="Nothing!">
+      <input id="secret" type="button" value="nothing." display="none">
     </center>
 
   </body>
