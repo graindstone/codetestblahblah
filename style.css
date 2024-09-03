@@ -14,3 +14,11 @@ body{
 #button:hover{
   background-color: Plum !important;
 }
+#text{
+  font-size: 15px;
+}
+#secret{
+  font-size: 15px;
+  border: none;
+  background-color: Thistle !important;
+}
