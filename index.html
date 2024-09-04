@@ -6,16 +6,9 @@
     <script>
       function nothings(){
         document.getElementById("text").style.display="none";
-        document.getElementById("text").innerHTML="I told you there's";
+        document.getElementById("text").innerHTML="Like I said, there's nothing here. Nothing but a useless button.";
         document.getElementById("text").style.display="block";
         document.getElementById("button").style.display="none";
-        document.getElementById("secret").style.display="block";
-      }
-      function startgame(){
-        document.getElemendById("text").style.display="none";
-        document.getElementById("text").innerHTML="Aw, you got me. Anyways, you unlocked a button!";
-        document.getElementById("text").style.display="block";
-        document.getElementById("secret").style.display="none";
         document.getElementById("waffle").style.display="block";
       }
     </script>
@@ -25,7 +18,6 @@
       <h1>Yet another code test</h1>
       <p id="text">There's nothing here. Obviously.</p>
       <input id="button" type="button" onclick="nothings()" value="Nothing!">
-      <input id="secret" type="button" value="nothing." style="display:none" onclick="startgame()">
       <input id="waffle" type="button" value="Get Waffle" style="display:none">
     </center>
 
