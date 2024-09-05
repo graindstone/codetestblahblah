@@ -54,7 +54,7 @@ function buycrate(){
     document.getElementById("cratee").setAttribute("disabled", "");
   }
   game.costcrate = game.costcrate *= 1.2;
-  game.costcrate = math.ceil(game.costcrate);
+  game.costcrate = Math.ceil(game.costcrate);
   document.getElementById("cratecost").style.cisplay="block";
   document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
 
