@@ -15,12 +15,12 @@ body{
   background-color: Plum;
 }
 #waffle:hover{
-  background-color: Plum;
+  background-color: Plum !important;
 }
 #machinee:hover{
   background-color: Plum;
 }
 button:disabled,
 button[disabled]{
-  background-color: Thistle !important;
+  background-color: Thistle;
 }
