@@ -1,14 +1,7 @@
-const machinebutton = document.getElementById("machinee");
-const textline = document.getElementById("text");
-const wafflebutton = document.getElementById("waffle");
-const wafflenumber = document.getElementById("waffleno");
-
-machinebutton.setAttribute("disabled", "");
 
 function nothings(){
-  textline.innerHTML="Like I said, there's nothing here. Nothing but a useless button.";
-  machinebutton.style.display="none";
-  waffle.style.display="block";
+  document.getElementById("text").innerHTML="Like I said, there's nothing here. Nothing but a useless button.";
+  document.getElementById("waffle").style.display="block";
 }
 let game = {
   waffle: 0,
@@ -19,9 +12,9 @@ function waffle(){
   wafflenumber.innerHTML="Waffles: " + game.waffle;
 }
 function startgame(){
-  textline.style.display="none";
-  wafflenumber.style.display="block";
+  document.getElementById("text").style.display="none";
+  document.getElementById("waffleno").style.display="block";
   waffle();
-  machinebutton.style.display="block";
+  document.getElementById("machinee").style.display="block";
 }
 
