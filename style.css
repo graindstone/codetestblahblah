@@ -25,6 +25,7 @@ button[disabled]{
   background-color: Thistle;
 }
 .buttonjumble{
-  display: flex;
+  display: inline-block;
   text-align: center;
+  position: absolute;
 }
