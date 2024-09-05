@@ -18,4 +18,10 @@ function startgame(){
   document.getElementById("machinee").setAttribute("disabled", "");
   waffle();
 }
- 
+for (var i=0; i<Infinity; i++) {
+  if (game.waffle >= 20){
+    document.getElementById("machinee").removeAttribute("disabled");
+  }
+  else if (game.waffle < 20){
+    document.getElementById("machinee").setAttribute("disabled", "");
+}
