@@ -5,7 +5,7 @@ body{
 #button, #waffle, #machinee{
   border-radius: 6px;
   border: 2px solid Plum;
-  background-color: Thistle !important;
+  background-color: Thistle;
   padding: 10px;
   transition-duration: 0.4s;
   font-family:verdana;
@@ -18,7 +18,7 @@ body{
   background-color: Plum !important;
 }
 #machinee:hover{
-  background-color: Plum !important;
+  background-color: Plum;
 }
 button:disabled,
 button[disabled]{
