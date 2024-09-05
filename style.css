@@ -2,7 +2,7 @@ body{
   font-family: verdana;
   background-color: Thistle;
 }
-#button, #waffle, #machinee{
+#button, #waffle, #cratee{
   border-radius: 6px;
   border: 2px solid Plum;
   background-color: Thistle;
@@ -17,7 +17,7 @@ body{
 #waffle:hover{
   background-color: Plum !important;
 }
-#machinee:hover{
+#cratee:hover{
   background-color: Plum;
 }
 button:disabled,
