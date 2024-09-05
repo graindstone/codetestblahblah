@@ -1,4 +1,4 @@
-const machinebutton = document.getElementById("button");
+const machinebutton = document.getElementById("machinee");
 const textline = document.getElementById("text");
 const wafflebutton = document.getElementById("waffle");
 const wafflenumber = document.getElementById("waffleno");
