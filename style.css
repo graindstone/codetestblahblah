@@ -12,11 +12,15 @@ body{
   font-size: 20px
 }
 #button:hover{
-  background-color: Plum !important;
+  background-color: Plum;
 }
 #waffle:hover{
-  background-color: Plum !important;
+  background-color: Plum;
 }
 #machinee:hover{
-  background-color: Plum !important;
+  background-color: Plum;
+}
+button:disabled,
+button[disabled]{
+  background-color: Thistle !important;
 }
