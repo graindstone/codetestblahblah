@@ -1,3 +1,6 @@
+function updatewaffle(){
+  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + " (" + time.waffletime + "/sec)";
+}
 function nothings(){
   document.getElementById("text").innerHTML="Like I said, there's nothing here. Nothing but a useless button.";
   document.getElementById("button").style.display="none";
@@ -12,7 +15,7 @@ let time = {
 }
 function waffle(){
   game.waffle++;
-  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + " (" + time.waffletime + "/sec";
+  updatewaffle();
   if (game.waffle >= 20){
     document.getElementById("machinee").removeAttribute("disabled");
   }
@@ -32,6 +35,7 @@ function buymachine(){
   game.waffle -= 20;
   game.machine++;
   document.getElementById("machineno").innerHTML="Machines: " + game.machine;
+  updatewaffle()
   if (game.waffle < 20){
     document.getElementById("machinee").setAttribute("diabled", "");
   }
