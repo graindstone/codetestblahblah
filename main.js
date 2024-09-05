@@ -16,6 +16,7 @@ let game = {
   wafflemax: 20,
   waffle: 0,
   crate: 0,
+  costcrate: 20,
 }
 let time = {
   waffletime: 0,
@@ -52,5 +53,7 @@ function buycrate(){
   else if (game.waffle < 20){
     document.getElementById("cratee").setAttribute("disabled", "");
   }
+  game.costcrate = math.ceil(1.2 * game.costcrate);
+  document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
 
 }
