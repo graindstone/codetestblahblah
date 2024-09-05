@@ -1,5 +1,5 @@
 function updatewaffle(){
-  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + "/" + wafflemax + "(" + time.waffletime + "/sec)";
+  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + "/" + game.wafflemax + "(" + time.waffletime + "/sec)";
 }
 function nothings(){
   document.getElementById("text").innerHTML="Like I said, there's nothing here. Nothing but a useless button.";
