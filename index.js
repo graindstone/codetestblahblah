@@ -34,7 +34,7 @@ function startgame(){
 function buycrate(){
   game.waffle -= 20;
   game.crate++;
-  document.getElementById("crateno").innerHTML="crates: " + game.crate;
+  document.getElementById("crateno").innerHTML="Crates: " + game.crate;
   updatewaffle();
   if (game.waffle >= 20){
     document.getElementById("cratee").removeAttribute("disabled");
