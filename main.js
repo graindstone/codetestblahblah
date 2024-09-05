@@ -46,7 +46,7 @@ function startgame(){
 function buycrate(){
   game.waffle -= game.costcrate;
   game.crate++;
-  game.wafflemax += 5;
+  game.wafflemax += 3;
   document.getElementById("crateno").innerHTML="Crates: " + game.crate;
   updatewaffle();
   if (game.waffle >= game.costcrate){
