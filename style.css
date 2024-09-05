@@ -24,7 +24,3 @@ button:disabled,
 button[disabled]{
   background-color: Thistle;
 }
-.buttonjumble{
-  display: inline-block;
-  text-align: center !important;
-}
