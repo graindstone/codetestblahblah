@@ -35,8 +35,8 @@ function buymachine(){
   game.waffle -= 20;
   game.machine++;
   document.getElementById("machineno").innerHTML="Machines: " + game.machine;
-  updatewaffle()
   if (game.waffle < 20){
     document.getElementById("machinee").setAttribute("diabled", "");
   }
+  updatewaffle()
 }
