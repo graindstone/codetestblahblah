@@ -17,6 +17,7 @@ let game = {
   waffle: 0,
   crate: 0,
   costcrate: 20,
+  crate_effect: 3,
 }
 let time = {
   waffletime: 0,
@@ -46,7 +47,9 @@ function startgame(){
 function buycrate(){
   game.waffle -= game.costcrate;
   game.crate++;
-  game.wafflemax += 3;
+  game.wafflemax += game.crate_effect;
+  game.crate_effect *= 1.89;
+  game.crate_effect = Math.ceil(game.crate_effect);
   document.getElementById("crateno").innerHTML="Crates: " + game.crate;
   updatewaffle();
   if (game.waffle >= game.costcrate){
