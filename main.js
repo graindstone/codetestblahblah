@@ -1,5 +1,5 @@
 function updatewaffle(){
-  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + "/" + game.wafflemax + "(" + time.waffletime + "/sec)";
+  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + "/" + game.wafflemax + " (" + time.waffletime + "/sec)";
 }
 function nothings(){
   document.getElementById("text").innerHTML="Like I said, there's nothing here. Nothing but a useless button.";
@@ -15,7 +15,13 @@ let time = {
   waffletime: 0,
 }
 function waffle(){
-  game.waffle++;
+  if (game.waffle < game.wafflemax){
+    document.getElementById("waffleno").style.color="black";
+    game.waffle++;
+  }
+  else{
+    document.getElementById("waffleno").style.color="GoldenRod";
+  }
   updatewaffle();
   if (game.waffle >= 20){
     document.getElementById("cratee").removeAttribute("disabled");
