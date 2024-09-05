@@ -55,7 +55,7 @@ function buycrate(){
   else if (game.waffle < game.costcrate){
     document.getElementById("cratee").setAttribute("disabled", "");
   }
-  game.costcrate *= 1.05
+  game.costcrate *= 1.075
   game.costcrate = Math.ceil(game.costcrate);
   document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
 }
