@@ -26,10 +26,10 @@ function waffle(){
     game.waffle++;
   }
   updatewaffle();
-  if (game.waffle >= 20){
+  if (game.waffle >= game.costcrate){
     document.getElementById("cratee").removeAttribute("disabled");
   }
-  else if (game.waffle < 20){
+  else if (game.waffle < game.costcrate){
     document.getElementById("cratee").setAttribute("disabled", "");
   }
 
@@ -42,18 +42,19 @@ function startgame(){
   waffle();
 }
 function buycrate(){
-  game.waffle -= 20;
+  game.waffle -= game.costcrate;
   game.crate++;
   game.wafflemax += 5;
   document.getElementById("crateno").innerHTML="Crates: " + game.crate;
   updatewaffle();
-  if (game.waffle >= 20){
+  if (game.waffle >= game.costcrate){
     document.getElementById("cratee").removeAttribute("disabled");
   }
-  else if (game.waffle < 20){
+  else if (game.waffle < game.costcrate){
     document.getElementById("cratee").setAttribute("disabled", "");
   }
   game.costcrate = math.ceil(1.2 * game.costcrate);
+  document.getElementById("cratecost").style.cisplay="block";
   document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
 
 }
