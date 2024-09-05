@@ -25,3 +25,7 @@ function startgame(){
   document.getElementById("machinee").setAttribute("disabled", "");
   waffle();
 }
+function buymachine(){
+  game.waffle = game.waffle - 20;
+  game.machine++;
+}
