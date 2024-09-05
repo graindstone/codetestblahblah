@@ -13,8 +13,9 @@ function waffle(){
 }
 function startgame(){
   document.getElementById("text").style.display="none";
+  document.getElementById("button").style.display="none";
   document.getElementById("waffleno").style.display="block";
-  waffle();
   document.getElementById("machinee").style.display="block";
+  waffle();
 }
 
