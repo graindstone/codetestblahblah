@@ -7,9 +7,12 @@ let game = {
   waffle: 0,
   machine: 0,
 }
+let time = {
+  waffletime: 0,
+}
 function waffle(){
   game.waffle++;
-  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle;
+  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + " (" + time.waffletime + "/sec";
   if (game.waffle >= 20){
     document.getElementById("machinee").removeAttribute("disabled");
   }
@@ -28,4 +31,8 @@ function startgame(){
 function buymachine(){
   game.waffle -= 20;
   game.machine++;
+  document.getElementById("machineno").innerHTML="Machines: " + game.machine;
+  if (game.waffle < 20){
+    document.getElementById("machinee").setAttribute("diabled", "");
+  }
 }
