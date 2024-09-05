@@ -10,6 +10,13 @@ let game = {
 function waffle(){
   game.waffle++;
   document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle;
+  if (game.waffle >= 20){
+    document.getElementById("machinee").removeAttribute("disabled");
+  }
+  else if (game.waffle < 20){
+    document.getElementById("machinee").setAttribute("disabled", "");
+  }
+
 }
 function startgame(){
   document.getElementById("text").style.display="none";
@@ -17,11 +24,4 @@ function startgame(){
   document.getElementById("machinee").style.display="block";
   document.getElementById("machinee").setAttribute("disabled", "");
   waffle();
-}
-for (var i=0; i<Infinity; i++) {
-  if (game.waffle >= 20){
-    document.getElementById("machinee").removeAttribute("disabled");
-  }
-  else if (game.waffle < 20){
-    document.getElementById("machinee").setAttribute("disabled", "");
 }
