@@ -13,7 +13,7 @@ function waffle(){
 }
 function startgame(){
   document.getElementById("text").innerHTML="Wow! Crazy!";
-  ocument.getElementById("waffleno").style.display="block";
+  document.getElementById("waffleno").style.display="block";
   waffle();
 }
 
