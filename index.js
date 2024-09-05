@@ -26,6 +26,6 @@ function startgame(){
   waffle();
 }
 function buymachine(){
-  game.waffle = game.waffle - 20;
+  game.waffle -= 20;
   game.machine++;
 }
