@@ -15,6 +15,7 @@ function startgame(){
   document.getElementById("text").style.display="none";
   document.getElementById("waffleno").style.display="block";
   document.getElementById("machinee").style.display="block";
+  document.getElementById("machinee").setAttribute("disabled", "");
   waffle();
 }
  
