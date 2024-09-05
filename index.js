@@ -12,7 +12,7 @@ function waffle(){
   document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle;
 }
 function startgame(){
-  document.getElementById("text").innerHTML="Wow! Crazy!";
+  document.getElementById("text").style.display="none";
   document.getElementById("waffleno").style.display="block";
   waffle();
 }
