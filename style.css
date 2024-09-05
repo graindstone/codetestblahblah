@@ -24,3 +24,6 @@ button:disabled,
 button[disabled]{
   background-color: Thistle;
 }
+.buttonjumble{
+  display: flex;
+}
