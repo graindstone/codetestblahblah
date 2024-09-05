@@ -8,7 +8,7 @@ function nothings(){
 }
 let game = {
   waffle: 0,
-  machine: 0,
+  crate: 0,
 }
 let time = {
   waffletime: 0,
@@ -17,30 +17,30 @@ function waffle(){
   game.waffle++;
   updatewaffle();
   if (game.waffle >= 20){
-    document.getElementById("machinee").removeAttribute("disabled");
+    document.getElementById("cratee").removeAttribute("disabled");
   }
   else if (game.waffle < 20){
-    document.getElementById("machinee").setAttribute("disabled", "");
+    document.getElementById("cratee").setAttribute("disabled", "");
   }
 
 }
 function startgame(){
   document.getElementById("text").style.display="none";
   document.getElementById("waffleno").style.display="block";
-  document.getElementById("machinee").style.display="block";
-  document.getElementById("machinee").setAttribute("disabled", "");
+  document.getElementById("cratee").style.display="block";
+  document.getElementById("cratee").setAttribute("disabled", "");
   waffle();
 }
-function buymachine(){
+function buycrate(){
   game.waffle -= 20;
-  game.machine++;
-  document.getElementById("machineno").innerHTML="Machines: " + game.machine;
+  game.crate++;
+  document.getElementById("crateno").innerHTML="crates: " + game.crate;
   updatewaffle();
   if (game.waffle >= 20){
-    document.getElementById("machinee").removeAttribute("disabled");
+    document.getElementById("cratee").removeAttribute("disabled");
   }
   else if (game.waffle < 20){
-    document.getElementById("machinee").setAttribute("disabled", "");
+    document.getElementById("cratee").setAttribute("disabled", "");
   }
 
 }
