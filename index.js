@@ -17,4 +17,4 @@ function startgame(){
   document.getElementById("machinee").style.display="block";
   waffle();
 }
-
+ 
