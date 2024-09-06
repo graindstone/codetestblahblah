@@ -1,5 +1,4 @@
 Checklist:
-- inplement cost creep
-- make machines actually do something
+- production rate
 - make css look prettier
 - autosave...? might come later
