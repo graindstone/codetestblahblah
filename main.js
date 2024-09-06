@@ -36,6 +36,7 @@ function waffle(){
 
 }
 function startgame(){
+  document.getElementById("title").innerHTML="Cool Waffle Game";
   document.getElementById("text").style.display="none";
   document.getElementById("waffleno").style.display="block";
   document.getElementById("cratee").style.display="block";
