@@ -65,6 +65,7 @@ function buycrate(){
   game.crate_effect *= 1.87;
   game.crate_effect = Math.ceil(game.crate_effect);
   document.getElementById("crateno").innerHTML="Crates: " + game.crate;
+  document.getElementById("machinee").style.display="block";
   document.getElementById("machinecost").style.display="block";
   document.getElementById("machinecost").innerHTML="Machine cost: " + game.costmachine;
   updatewaffle();
