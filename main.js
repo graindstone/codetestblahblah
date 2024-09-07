@@ -1,3 +1,19 @@
+function checkprice(){
+  if (game.waffle >= game.costcrate){
+    document.getElementById("cratee").removeAttribute("disabled");
+  }
+  else if (game.waffle < game.costcrate){
+    document.getElementById("cratee").setAttribute("disabled", "");
+  }
+  if (game.waffle >= game.costmachine){
+    document.getElementById("machinee").removeAttribute("disabled");
+  }
+  else if (game.waffle < game.costmachine){
+    document.getElementById("machinee").setAttribute("disabled", "");
+  }
+}
+
+
 function updatewaffle(){
   document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + "/" + game.wafflemax + " (" + time.waffletime + "/sec)";
   if (game.waffle < game.wafflemax){
@@ -18,6 +34,8 @@ let game = {
   crate: 0,
   costcrate: 20,
   crate_effect: 3,
+  machine: 0,
+  costmachine: 45,
 }
 let time = {
   waffletime: 0,
@@ -27,12 +45,7 @@ function waffle(){
     game.waffle++;
   }
   updatewaffle();
-  if (game.waffle >= game.costcrate){
-    document.getElementById("cratee").removeAttribute("disabled");
-  }
-  else if (game.waffle < game.costcrate){
-    document.getElementById("cratee").setAttribute("disabled", "");
-  }
+  checkprice();
 
 }
 function startgame(){
@@ -52,14 +65,15 @@ function buycrate(){
   game.crate_effect *= 1.87;
   game.crate_effect = Math.ceil(game.crate_effect);
   document.getElementById("crateno").innerHTML="Crates: " + game.crate;
+  document.getElementById("machinecost").style.display="block";
+  document.getElementById("machinecost").innerHTML="Machine cost: " + game.costmachine;
   updatewaffle();
-  if (game.waffle >= game.costcrate){
-    document.getElementById("cratee").removeAttribute("disabled");
-  }
-  else if (game.waffle < game.costcrate){
-    document.getElementById("cratee").setAttribute("disabled", "");
-  }
+  checkprice();
   game.costcrate *= 1.085
   game.costcrate = Math.ceil(game.costcrate);
   document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
+}
+function buymachine(){
+  game.waffle -= game.costmachine;
+  game.machine++;
 }
