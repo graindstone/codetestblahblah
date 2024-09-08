@@ -70,10 +70,8 @@ function buycrate(){
 }
 function machinery(){
   do{
-    setTimeout(function(){
-      updatewaffle();
-      game.waffle += time.waffletime;
-    }, 1000);
+    game.waffle += time.waffletime;
+    setInterval(machinery, 1000);
  } while (game.waffle < game.wafflemax);
 }
 
