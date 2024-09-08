@@ -75,7 +75,7 @@ function buymachine(){
   game.costmachine *= 1.067;
   game.costmachine = Math.ceil(game.costmachine);
   document.getElementById("machinecost").innerHTML="Machine cost: " + game.costmachine;
-  game.waffletime += 0.5;
+  time.waffletime += 0.5;
   updatewaffle();
 }
 
