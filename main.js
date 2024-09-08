@@ -77,4 +77,5 @@ function buycrate(){
 function buymachine(){
   game.waffle -= game.costmachine;
   game.machine++;
+  updatewaffle();
 }
