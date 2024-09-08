@@ -72,7 +72,6 @@ function machinery(){
   do{
     game.waffle += time.waffletime;
     updatewaffle();
-    setInterval(machinery, 1000);
  } while (game.waffle < game.wafflemax);
 }
 
@@ -85,6 +84,6 @@ function buymachine(){
   document.getElementById("machinecost").innerHTML="Machine cost: " + game.costmachine;
   time.waffletime += 0.5;
   updatewaffle();
-  machinery();
+  setInterval(machinery, 1000);
 }
 
