@@ -52,6 +52,7 @@ function startgame(){
   waffle();
   document.getElementById("cratecost").style.cisplay="block";
   document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
+  setInterval(machinery, 1000);
 }
 function buycrate(){
   game.waffle -= game.costcrate;
@@ -82,6 +83,5 @@ function buymachine(){
   document.getElementById("machinecost").innerHTML="Machine cost: " + game.costmachine;
   time.waffletime += 0.5;
   updatewaffle();
-  setInterval(machinery, 1000);
 }
 
