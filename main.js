@@ -62,7 +62,7 @@ function buycrate(){
   game.waffle -= game.costcrate;
   game.crate++;
   game.wafflemax += game.crate_effect;
-  game.crate_effect *= 1.87;
+  game.crate_effect *= 1.7;
   game.crate_effect = Math.ceil(game.crate_effect);
   document.getElementById("crateno").innerHTML="Crates: " + game.crate;
   document.getElementById("machinee").style.display="block";
