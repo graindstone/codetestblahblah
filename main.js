@@ -77,4 +77,4 @@ function buymachine(){
   game.costmachine = Math.ceil(game.costmachine);
   document.getElementById("machinecost").innerHTML="Machine cost: " + game.costmachine;
 }
-}
+
