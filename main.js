@@ -1,5 +1,5 @@
 function updatewaffle(){
-  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + "/" + game.wafflemax + " (" + time.waffletime + "/sec)";
+  document.getElementById("waffleno").innerHTML="Waffles: " + Math.floor(game.waffle) + "/" + game.wafflemax + " (" + time.waffletime + "/sec)";
   if (game.waffle < game.wafflemax){
     document.getElementById("waffleno").style.color="black";
   }
@@ -68,6 +68,15 @@ function buycrate(){
   game.costcrate = Math.ceil(game.costcrate);
   document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
 }
+function machinery(){
+  do{
+    setTimeout(function(){
+      updatewaffle();
+      game.waffle += time.waffletime;
+    }, 1000);
+ } while (game.waffle < game.wafflemax);
+}
+
 function buymachine(){
   game.waffle -= game.costmachine;
   game.machine++;
@@ -77,5 +86,6 @@ function buymachine(){
   document.getElementById("machinecost").innerHTML="Machine cost: " + game.costmachine;
   time.waffletime += 0.5;
   updatewaffle();
+  machinery();
 }
 
