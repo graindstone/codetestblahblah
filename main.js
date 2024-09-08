@@ -69,7 +69,6 @@ function buycrate(){
   document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
 }
 function machinery(){
-  game.waffle += time.waffletime;
   game.waffle = Math.min(game.waffle + time.waffletime, game.wafflemax);
   updatewaffle();
 }
