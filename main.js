@@ -64,12 +64,17 @@ function buycrate(){
   document.getElementById("machinecost").style.display="block";
   document.getElementById("machinecost").innerHTML="Machine cost: " + game.costmachine;
   updatewaffle();
-  game.costcrate *= 1.085
+  game.costcrate *= 1.085;
   game.costcrate = Math.ceil(game.costcrate);
   document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
 }
 function buymachine(){
   game.waffle -= game.costmachine;
   game.machine++;
+  document.getElementById("machineno").innerHTML="Machines: " + game.machine;
   updatewaffle();
+  game.costmachine *= 1.067;
+  game.costmachine = Math.ceil(game.costmachine);
+  document.getElementById("machinecost").innerHTML="Machine cost: " + game.costmachine;
+}
 }
