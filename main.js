@@ -71,6 +71,7 @@ function buycrate(){
 function machinery(){
   do{
     game.waffle += time.waffletime;
+    updatewaffle();
     setInterval(machinery, 1000);
  } while (game.waffle < game.wafflemax);
 }
