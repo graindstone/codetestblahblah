@@ -19,7 +19,7 @@ function updatewaffle(){
     document.getElementById("machinee").setAttribute("disabled", "");
   }
 }
-}
+
 function nothings(){
   document.getElementById("text").innerHTML="Like I said, there's nothing here. Nothing but a useless button.";
   document.getElementById("button").style.display="none";
