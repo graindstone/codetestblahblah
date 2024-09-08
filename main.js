@@ -1,4 +1,11 @@
-function checkprice(){
+function updatewaffle(){
+  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + "/" + game.wafflemax + " (" + time.waffletime + "/sec)";
+  if (game.waffle < game.wafflemax){
+    document.getElementById("waffleno").style.color="black";
+  }
+  else{
+    document.getElementById("waffleno").style.color="GoldenRod";
+  }
   if (game.waffle >= game.costcrate){
     document.getElementById("cratee").removeAttribute("disabled");
   }
@@ -12,16 +19,6 @@ function checkprice(){
     document.getElementById("machinee").setAttribute("disabled", "");
   }
 }
-
-
-function updatewaffle(){
-  document.getElementById("waffleno").innerHTML="Waffles: " + game.waffle + "/" + game.wafflemax + " (" + time.waffletime + "/sec)";
-  if (game.waffle < game.wafflemax){
-    document.getElementById("waffleno").style.color="black";
-  }
-  else{
-    document.getElementById("waffleno").style.color="GoldenRod";
-  }
 }
 function nothings(){
   document.getElementById("text").innerHTML="Like I said, there's nothing here. Nothing but a useless button.";
@@ -45,8 +42,6 @@ function waffle(){
     game.waffle++;
   }
   updatewaffle();
-  checkprice();
-
 }
 function startgame(){
   document.getElementById("title").innerHTML="Cool Waffle Game";
@@ -69,7 +64,6 @@ function buycrate(){
   document.getElementById("machinecost").style.display="block";
   document.getElementById("machinecost").innerHTML="Machine cost: " + game.costmachine;
   updatewaffle();
-  checkprice();
   game.costcrate *= 1.085
   game.costcrate = Math.ceil(game.costcrate);
   document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
