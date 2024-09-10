@@ -24,6 +24,7 @@ function nothings(){
   document.getElementById("text").innerHTML="Like I said, there's nothing here. Nothing but a useless button.";
   document.getElementById("button").style.display="none";
   document.getElementById("waffle").style.display="block";
+  setInterval(machinery, 1000);
 }
 let game = {
   wafflemax: 20,
@@ -52,7 +53,6 @@ function startgame(){
   waffle();
   document.getElementById("cratecost").style.cisplay="block";
   document.getElementById("cratecost").innerHTML="Crate cost: " + game.costcrate;
-  setInterval(machinery, 1000);
 }
 function buycrate(){
   game.waffle -= game.costcrate;
